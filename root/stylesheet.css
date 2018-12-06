@@ -16,6 +16,9 @@ a {
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
+.blue {
+  color: rgb(100, 200, 255);
+}
 #header {
   background-color: rgb(0, 175, 200);
   color: rgb(255, 255, 255);
