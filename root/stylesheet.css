@@ -53,14 +53,15 @@ a {
   padding: 5%;
 }
 .code {
-  background-color: rgb(75, 75, 75);
+  background-color: rgb(60, 60, 60);
   color: rgb(255, 255, 255);
   padding: 20px;
 }
 .code-bottom {
-  width: 100%;
+  width: calc(100% + 40px);
   height: 10px;
   background-color: rgb(200, 100, 50);
+  margin: -20px;
 }
 #footer {
   position: fixed;
