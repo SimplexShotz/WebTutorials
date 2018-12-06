@@ -23,7 +23,7 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     document.getElementById("footer").style.width = "calc(100% - 60px)";
   }, 0);
 }
-setTimeout(() => 
+setTimeout(() => {
   var height = Math.max(document.body.scrollHeight, document.body.offsetHeight, document.documentElement.clientHeight, document.documentElement.scrollHeight, document.documentElement.offsetHeight);
   if (height > window.innerHeight) {
     document.getElementById("footer").style.position = "static";
