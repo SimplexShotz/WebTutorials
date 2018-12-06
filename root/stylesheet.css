@@ -13,8 +13,10 @@ p {
   font-size: 12pt;
 }
 a {
-  color: rgb(100, 200, 255);
   text-decoration: none;
+}
+a:link.bluea {
+  color: rgb(100, 200, 255);
 }
 #header {
   background-color: rgb(0, 175, 200);
