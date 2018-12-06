@@ -52,6 +52,9 @@ a {
   margin: 0px 25% 0px 25%;
   padding: 5%;
 }
+#links {
+  color: rgb(100, 200, 255);
+}
 #footer {
   position: fixed;
   width: calc(100% - 30px);
