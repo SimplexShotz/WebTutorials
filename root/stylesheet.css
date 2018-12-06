@@ -61,7 +61,7 @@ a {
   width: calc(100% + 40px);
   height: 10px;
   background-color: rgb(200, 100, 50);
-  margin: -20px;
+  margin: 0px -20px -20px -20px;
 }
 #footer {
   position: fixed;
