@@ -12,6 +12,12 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     for (var i = 0; i < document.getElementsByTagName("p").length; i++) {
       document.getElementsByTagName("p")[i].style.fontSize = "30pt";
     }
+    for (var i = 0; i < document.getElementsByTagName("a").length; i++) {
+      document.getElementsByTagName("a")[i].style.fontSize = "30pt";
+    }
+    for (var i = 0; i < document.getElementsByTagName("li").length; i++) {
+      document.getElementsByTagName("li")[i].style.fontSize = "30pt";
+    }
     document.getElementById("footer").style.position = "static";
     document.getElementById("footer").style.padding = "30px";
     document.getElementById("footer").style.fontSize = "30pt";
