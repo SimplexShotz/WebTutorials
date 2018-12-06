@@ -52,6 +52,11 @@ a {
   margin: 0px 25% 0px 25%;
   padding: 5%;
 }
+.code {
+  background-color: rgb(50, 50, 50);
+  color: rgb(255, 255, 255);
+  padding: 20px;
+}
 #footer {
   position: fixed;
   width: calc(100% - 30px);
