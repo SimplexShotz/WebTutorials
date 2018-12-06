@@ -15,7 +15,7 @@ p {
 a {
   text-decoration: none;
 }
-a:link.bluea {
+a.bluea {
   color: rgb(100, 200, 255);
 }
 #header {
