@@ -24,9 +24,18 @@ a {
 }
 #navbar {
   float: right;
-  color: rgb(255, 255, 255);
   font-size: 12pt;
   padding-top: 3px;
+}
+.nb-d {
+  color: rgb(255, 255, 255);
+}
+.nb-d-s {
+  display: inline-block;
+  width: 2px;
+  height: 80%;
+  background-color: rgb(255, 255, 255);
+  margin: 0px 20px 0px 20px;
 }
 #navbar-mobile {
   display: none;
@@ -74,14 +83,4 @@ a {
   background-color: rgb(100, 100, 100);
   color: rgb(225, 225, 225);
   padding: 15px;
-}
-.seperator {
-  display: inline-block;
-  width: 2px;
-  height: 80%;
-  background-color: rgb(255, 255, 255);
-  margin: 0px 20px 0px 20px;
-}
-.blue {
-  color: rgb(100, 200, 255);
 }
