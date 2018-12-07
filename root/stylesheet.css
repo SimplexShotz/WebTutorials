@@ -13,7 +13,7 @@ p {
   font-size: 12pt;
 }
 a {
-  color: rgb(255, 255, 255);
+  color: rgb(100, 200, 255);
   text-decoration: none;
 }
 #header {
@@ -24,6 +24,7 @@ a {
 }
 #navbar {
   float: right;
+  color: rgb(255, 255, 255);
   font-size: 12pt;
   padding-top: 3px;
 }
