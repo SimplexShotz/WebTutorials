@@ -68,13 +68,13 @@ a {
   padding: 20px 20px 0px 20px;
 }
 .code-bottom {
-  width: calc(100% + 40px);
+  width: calc(100% + 37px);
   height: 10px;
   background-color: rgb(200, 100, 50);
   color: rgb(255, 255, 255);
   font-size: 8px;
   margin: 20px -20px 0px -20px;
-  padding: 1px 0px 0px 3px;
+  padding: auto 0px auto 3px;
 }
 #footer {
   position: fixed;
