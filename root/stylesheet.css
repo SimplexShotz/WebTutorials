@@ -71,6 +71,10 @@ a {
   display: inline;
   color: rgb(200, 150, 100);
 }
+.code-comment {
+  display: inline;
+  color: rgb(240, 240, 240);
+}
 .code-bottom {
   width: calc(100% + 37px);
   height: 10px;
