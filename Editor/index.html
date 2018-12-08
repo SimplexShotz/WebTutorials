@@ -60,11 +60,20 @@
           document.getElementById("webpage").style.height = "calc(" + window.innerHeight + "px - 50pt - 240px - " + (window.innerWidth / 10) + "px - 30pt - 30pt - 40pt - 30pt)";
           document.getElementById("code").style.fontSize = "20pt";
         } else {
-          document.getElementById("code").style.height = "calc(" + window.innerHeight + "px - 14pt - 100px - " + (window.innerWidth / 10) + "px - 12pt - 12pt - 16pt)";
-          document.getElementById("webpage").style.height = "calc(" + window.innerHeight + "px - 14pt - 100px - " + (window.innerWidth / 10) + "px - 12pt - 12pt - 16pt)";
+          setInterval(() => {
+            document.getElementById("code").style.height = "calc(" + window.innerHeight + "px - 14pt - 100px - " + (window.innerWidth / 10) + "px - 12pt - 12pt - 16pt)";
+            document.getElementById("webpage").style.height = "calc(" + window.innerHeight + "px - 14pt - 100px - " + (window.innerWidth / 10) + "px - 12pt - 12pt - 16pt)";
+          }, 1000);  
           document.getElementById("code").style.fontSize = "10pt";
         }
       }, 0);
+      var pcode = "";
+      setInterval(() => {
+        if (document.getElementById("code").value !== pcode) {
+          document.getElementById("webpage").innerHTML = document.getElementById("code").value;
+        }
+        pcode = document.getElementById("code").value;
+      }, 1000);
       function getQuery(variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
