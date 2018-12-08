@@ -30,12 +30,16 @@ setTimeout(() => {
   }
   for (var i = 0; i < document.getElementsByClassName("code").length; i++) {
     var c = document.getElementsByClassName("code")[i].innerHTML.split("");
-    for (var j = 0; j < c.length - 2; j++) {
-      if (c[j] === "&" && c[j + 1] === "l" && c[j + 2] === "t") {
+    for (var j = 0; j < c.length - 3; j++) {
+      if (c[j] === "&" && c[j + 1] === "l" && c[j + 2] === "t" && c[j + 3] === ";") {
         c.splice(j, 0, "<div class=\"code-tag\">");
-        j += 3;
+        j += 5;
       }
-      console.log(c[j]);
+      if (c[j] === "&" && c[j + 1] === "g" && c[j + 2] === "t" && c[j + 3] === ";") {
+        c.splice(j + 1, 0, "</div>");
+        j += 5;
+      }
     }
+    document.getElementsByClassName("code")[i].innerHTML = c.join("");
   }
 }, 0);
