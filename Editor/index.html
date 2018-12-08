@@ -38,16 +38,13 @@
     <div id="content">
       <h1>Web Editor</h1>
       <textarea id="code"></textarea>
-      <p>What are you doing here?<br>How did you get here?<br>You shouldn't be here!</p>
-      <p>This page is currently an unlinked test page.</p>
-      <p><a href="/WebTutorials">Click here to return home</a>.</p>
     </div> <!-- #content -->
     <div id="footer">
       Copyright 2018 IC
     </div> <!-- footer -->
     <script>
       setTimeout(() => {
-        document.getElementById("code").style.height = "calc(" + window.innerHeight + "px - 14pt - 70px - " + (window.innerWidth / 10) + "px - 12pt)";
+        document.getElementById("code").style.height = "calc(" + window.innerHeight + "px - 14pt - 70px - " + (window.innerWidth / 10) + "px - 12pt - 16pt)";
         console.log(document.getElementById("code").style.height);
       }, 0);
       function getQuery(variable) {
