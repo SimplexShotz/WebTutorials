@@ -21,6 +21,7 @@
       <p>What are you doing here?<br>How did you get here?<br>You shouldn't be here!</p>
       <p>This page is currently an unlinked test page.</p>
       <p><a href="/WebTutorials">Click here to return home</a>.</p>
+      <textarea id="code"></textarea>
     </div> <!-- #content -->
     <div id="footer">
       Copyright 2018 IC
@@ -37,6 +38,30 @@
         }
         return(false);
       }
+      var code = "";
+      switch(getQuery("C")) {
+        case "1":
+          switch(getQuery("L")) {
+            case "1":
+              code = "<!DOCTYPE html>\n<html>\n  <head>\n  </head>\n  <body>\n  </body>\n</html>";
+            break;
+            case "2":
+              code = "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Put your title here!</title>\n  </head>\n  <body>\n    <h1>This header is largest!</h1>\n    <h3>This header is large!</h3>\n    <h5>This header is small.</h5>\n    <h7>This header is smallest.</h7>\n  </body>\n</html>";
+            break;
+            default:
+              if (getQuery("L")) {
+                alert("That lesson does not exist!");
+              }
+            break;
+          }
+        break;
+        default:
+          if (getQuery("C")) {
+            alert("That chapter does not exist!");
+          }
+        break;
+      }
+      document.getElementById("code").value = code;
       console.log(getQuery("C"));
       console.log(getQuery("L"));
     </script> <!-- Get Query -->
