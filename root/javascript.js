@@ -28,4 +28,14 @@ setTimeout(() => {
   if (height > window.innerHeight) {
     document.getElementById("footer").style.position = "static";
   }
+  for (var i = 0; i < document.getElementsByClassName("code").length; i++) {
+    var c = document.getElementsByClassName("code")[i];
+    for (var j = 0; j < c.split("").length - 2; j++) {
+      if (c.split("")[j] === "&" && c.split("")[j + 1] === "l" && c.split("")[j + 2] === "t") {
+        c.splice(j, 0, "<div class=\"code-tag\">");
+        j += 3;
+      }
+      console.log(c.split("")[j]);
+    }
+  }
 }, 0);
