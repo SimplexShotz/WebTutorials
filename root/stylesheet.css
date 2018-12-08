@@ -67,6 +67,10 @@ a {
   color: rgb(255, 255, 255);
   padding: 20px 20px 0px 20px;
 }
+.code-tag {
+  display: inline;
+  color: rgb(200, 150, 100);
+}
 .code-bottom {
   width: calc(100% + 37px);
   height: 10px;
