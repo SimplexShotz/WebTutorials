@@ -23,6 +23,14 @@
         outline: 0;
         border-color: rgb(200, 200, 200);
       }
+      #webpage {
+        float: right;
+        width: calc(50% - 5px);
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-family: Helvetica;
+        border-color: rgb(225, 225, 225);
+      }
     </style>
   </head>
   <body>
@@ -38,6 +46,7 @@
     <div id="content">
       <h1>Web Editor</h1>
       <textarea id="code"></textarea>
+      <div id="webpage"></div>
     </div> <!-- #content -->
     <div id="footer">
       Copyright 2018 IC
@@ -46,9 +55,11 @@
       setTimeout(() => {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
           document.getElementById("code").style.height = "calc(" + window.innerHeight + "px - 50pt - 240px - " + (window.innerWidth / 10) + "px - 30pt - 30pt - 40pt - 30pt)";
+          document.getElementById("webpage").style.height = "calc(" + window.innerHeight + "px - 50pt - 240px - " + (window.innerWidth / 10) + "px - 30pt - 30pt - 40pt - 30pt)";
           document.getElementById("code").style.fontSize = "20pt";
         } else {
           document.getElementById("code").style.height = "calc(" + window.innerHeight + "px - 14pt - 100px - " + (window.innerWidth / 10) + "px - 12pt - 12pt - 16pt)";
+          document.getElementById("webpage").style.height = "calc(" + window.innerHeight + "px - 14pt - 100px - " + (window.innerWidth / 10) + "px - 12pt - 12pt - 16pt)";
           document.getElementById("code").style.fontSize = "10pt";
         }
       }, 0);
