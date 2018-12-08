@@ -35,15 +35,15 @@ setTimeout(() => {
     var c = document.getElementsByClassName("code")[i].innerHTML.split("");
     for (var j = 0; j < c.length - 3; j++) {
       if (c[j] === "&" && c[j + 1] === "l" && c[j + 2] === "t" && c[j + 3] === ";" && c[j + 4] === "!") {
-        c.splice(j, 0, "<div class=\"code-comment\" style=\"display: inline;\">");
+        c.splice(j, 0, "<pre class=\"code-comment\">");
         j += 6;
       }
       if (j < c.length - 3  && c[j] === "&" && c[j + 1] === "l" && c[j + 2] === "t" && c[j + 3] === ";") {
-        c.splice(j, 0, "<div class=\"code-tag\" style=\"display: inline;\">");
+        c.splice(j, 0, "<pre class=\"code-tag\">");
         j += 5;
       }
       if (j < c.length - 3 && c[j] === "&" && c[j + 1] === "g" && c[j + 2] === "t" && c[j + 3] === ";") {
-        c.splice(j + 4, 0, "</div>");
+        c.splice(j + 4, 0, "</pre>");
         j += 5;
       }
     }
