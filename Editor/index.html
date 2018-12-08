@@ -11,6 +11,19 @@
         margin: 0px 5% 0px 5%;
         padding: 5%;
       }
+      #code {
+        width: calc(50% - 5px);
+        height: 75%;
+        background-color: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+        font-family: Helvetica;
+        border-color: rgb(250, 250, 250);
+        resize: none;
+      }
+      #code:focus {
+        outline: 0;
+        border-color: rgb(200, 200, 200);
+      }
     </style>
   </head>
   <body>
@@ -25,10 +38,10 @@
     </div> <!-- #navbar-mobile -->
     <div id="content">
       <h1>Web Editor</h1>
+      <textarea id="code"></textarea>
       <p>What are you doing here?<br>How did you get here?<br>You shouldn't be here!</p>
       <p>This page is currently an unlinked test page.</p>
       <p><a href="/WebTutorials">Click here to return home</a>.</p>
-      <textarea id="code"></textarea>
     </div> <!-- #content -->
     <div id="footer">
       Copyright 2018 IC
