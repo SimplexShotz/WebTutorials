@@ -6,6 +6,9 @@ if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phon
     document.getElementById("navbar").style.display = "none";
     document.getElementById("navbar-mobile").style.display = "block";
     document.getElementById("content").style.margin = "0px 5% 0px 5%";
+    for (var i = 0; i < document.getElementsByClassName("code-bottom").length; i++) {
+      document.getElementsByClassName("code-bottom")[i].innerHTML = "";
+    }
     for (var i = 0; i < document.getElementsByTagName("h1").length; i++) {
       document.getElementsByTagName("h1")[i].style.fontSize = "40pt";
     }
