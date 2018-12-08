@@ -35,7 +35,7 @@ setTimeout(() => {
         c.splice(j, 0, "<div class=\"code-tag\">");
         j += 5;
       }
-      if (c[j] === "&" && c[j + 1] === "g" && c[j + 2] === "t" && c[j + 3] === ";") {
+      if (j < c.length - 3 && c[j] === "&" && c[j + 1] === "g" && c[j + 2] === "t" && c[j + 3] === ";") {
         c.splice(j + 1, 0, "</div>");
         j += 5;
       }
