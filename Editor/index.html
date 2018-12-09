@@ -25,13 +25,16 @@
         border-color: rgb(200, 200, 200);
       }
       #webpage {
-        float: right;
         width: calc(50% - 20px);
         background-color: rgb(255, 255, 255);
         color: rgb(0, 0, 0);
         font-family: Helvetica;
         border: 1px solid rgb(225, 225, 225);
         padding: 0px;
+      }
+      .surround {
+        padding: 0px;
+        margin: 0px;
       }
     </style>
   </head>
@@ -46,9 +49,13 @@
       <a class="nb-m" href="/WebTutorials">Home</a><div class="nb-m-s">&nbsp</div><a class="nb-m" href="/WebTutorials/help.html">Help</a><div class="nb-m-s">&nbsp</div><a class="nb-m" href="/WebTutorials/Editor">Editor</a>
     </div> <!-- #navbar-mobile -->
     <div id="content">
+      <div class="surround">
       <h1>Web Editor</h1>
-      <textarea id="code"></textarea>
-      <iframe id="webpage"></iframe>
+        <textarea id="code"></textarea>
+      </div> <!-- .surround -->
+      <div class="surround" style="float: right;">
+        <iframe id="webpage"></iframe>
+      </div> <!-- .surround -->
     </div> <!-- #content -->
     <div id="footer">
       Copyright 2018 IC
@@ -135,13 +142,21 @@
         document.getElementById("code").onkeyup = update;
         update();
       }, 0);
-      var pcode = "";
-      setInterval(() => {
-        if (document.getElementById("code").value !== pcode) {
-          document.getElementById("webpage").innerHTML = document.getElementById("code").value;
+//       var pcode = "";
+//       setInterval(() => {
+//         if (document.getElementById("code").value !== pcode) {
+//           document.getElementById("webpage").innerHTML = document.getElementById("code").value;
+//         }
+//         pcode = document.getElementById("code").value;
+//       }, 1000);
+      document.getElementById("code").onkeydown = function(e) {
+        if (e.keyCode === 9 || e.which === 9) {
+          e.preventDefault();
+          var s = this.selectionStart;
+          this.value = this.value.substring(0,this.selectionStart) + "\t" + this.value.substring(this.selectionEnd);
+          this.selectionEnd = s + 1; 
         }
-        pcode = document.getElementById("code").value;
-      }, 1000);
+      }
       function getQuery(variable) {
         var query = window.location.search.substring(1);
         var vars = query.split("&");
