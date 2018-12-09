@@ -62,7 +62,7 @@
         <textarea id="code"></textarea>
       </div> <!-- .surround -->
       <div class="surround" style="float: right;">
-        <h1>Title</h1>
+        <h1 id="title">New Webpage</h1>
         <iframe id="webpage"></iframe>
       </div> <!-- .surround -->
       <div id="clear"></div>
@@ -111,6 +111,26 @@
         }
         return st;
       };
+      function getTitle(cd) {
+        var c = cd.split("");
+        var st = "";
+        for (var i = 0; i < c.length; i++) {
+          if (c[i] === "<" && i < c.length - 6) {
+            if (c[i + 1].toLowerCase() === "t" && c[i + 2].toLowerCase() === "i" && c[i + 3].toLowerCase() === "t" && c[i + 4].toLowerCase() === "l" && c[i + 5].toLowerCase() === "e" && c[i + 6] === ">") {
+              st = "";
+              for (var r = 0; r < 10000; r++) {
+                if (c[i + 7 + r] === "<" && i + 7 + r < c.length - 7) {
+                  if (c[i + 7 + r + 1] === "/" && c[i + 7 + r + 2].toLowerCase() === "t" && c[i + 7 + r + 3].toLowerCase() === "i" && c[i + 7 + r + 4].toLowerCase() === "t" && c[i + 7 + r + 5].toLowerCase() === "l" && c[i + 7 + r + 6].toLowerCase() === "e" && c[i + 7 + r + 7] === ">") {
+                    break;
+                  }
+                }
+                st += c[i + 7 + r];
+              }
+            }
+          }
+        }
+        return st;
+      };
       setTimeout(() => {
         if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
           document.getElementById("code").style.height = "calc(" + window.innerHeight + "px - 50pt - 235px - " + (window.innerWidth / 10) + "px - 30pt - 30pt - 40pt - 30pt)";
@@ -137,6 +157,11 @@
               style = document.createElement("style"),
               script = document.createElement("script");
           document.body.innerHTML = html.value;
+          if (getTitle(html.value) !== "") {
+            document.getElementById("title").innerText = getTitle(html.value);
+          } else {
+            document.getElementById("title").innerText = "New Webpage";
+          }
           var styles = getStyle(html.value);
           for (var i = 0; i < styles.length; i++) {
             style.innerHTML += styles[i];
