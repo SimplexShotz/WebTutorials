@@ -47,7 +47,7 @@
     </div> <!-- #navbar-mobile -->
     <div id="content">
       <h1>Web Editor</h1>
-      <textarea id="code"></textarea>
+      <textarea id="code" onkeyup="update()"></textarea>
       <iframe id="webpage"></iframe>
     </div> <!-- #content -->
     <div id="footer">
@@ -110,7 +110,6 @@
         }
         var html = document.getElementById("code"),
             webpage = document.getElementById("webpage");
-        document.getElementById("code").onkeyup = update();
         var working = false;
         function update() {
           if (working) {
