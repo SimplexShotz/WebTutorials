@@ -32,6 +32,11 @@
         border: 1px solid rgb(225, 225, 225);
         padding: 0px;
       }
+      #title-div {
+        overflow: scroll;
+        padding: 0px;
+        margin: 0px;
+      }
       #clear {
         clear: both;
         width: 100%;
@@ -62,7 +67,9 @@
         <textarea id="code"></textarea>
       </div> <!-- .surround -->
       <div class="surround" style="float: right;">
-        <h1 id="title">New Webpage</h1>
+        <div id="title-div">
+          <h1 id="title">New Webpage</h1>
+        </div> <!-- #title-div -->
         <iframe id="webpage"></iframe>
       </div> <!-- .surround -->
       <div id="clear"></div>
