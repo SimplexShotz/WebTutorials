@@ -131,9 +131,9 @@
           document.body.appendChild(style);
           document.body.appendChild(script);
           working = false;
-          console.log("yay");
         }
         document.getElementById("code").onkeyup = update;
+        update();
       }, 0);
       var pcode = "";
       setInterval(() => {
