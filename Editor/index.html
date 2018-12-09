@@ -146,7 +146,8 @@
           document.getElementById("code").style.fontSize = "10pt";
         }
         var html = document.getElementById("code"),
-            webpage = document.getElementById("webpage");
+            webpage = document.getElementById("webpage"),
+            title = document.getElementById("title");
         var working = false;
         function update() {
           if (working) {
@@ -158,9 +159,9 @@
               script = document.createElement("script");
           document.body.innerHTML = html.value;
           if (getTitle(html.value) !== "") {
-            document.getElementById("title").innerText = getTitle(html.value);
+            title.innerText = getTitle(html.value);
           } else {
-            document.getElementById("title").innerText = "New Webpage";
+            title.innerText = "New Webpage";
           }
           var styles = getStyle(html.value);
           for (var i = 0; i < styles.length; i++) {
