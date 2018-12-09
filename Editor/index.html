@@ -47,7 +47,7 @@
     </div> <!-- #navbar-mobile -->
     <div id="content">
       <h1>Web Editor</h1>
-      <textarea id="code" onkeyup="update()"></textarea>
+      <textarea id="code"></textarea>
       <iframe id="webpage"></iframe>
     </div> <!-- #content -->
     <div id="footer">
@@ -133,6 +133,7 @@
           working = false;
           console.log("yay");
         }
+        document.getElementById("code").onkeyup = update;
       }, 0);
       var pcode = "";
       setInterval(() => {
