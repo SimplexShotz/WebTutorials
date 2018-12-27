@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8">
     <title>Web Tutorials - Editor</title>
     <script src="/WebTutorials/root/javascript.js"></script>
     <link rel="stylesheet" href="/WebTutorials/root/stylesheet.css">
@@ -201,6 +200,12 @@
           var s = this.selectionStart;
           this.value = this.value.substring(0, this.selectionStart) + "  " + this.value.substring(this.selectionEnd);
           this.selectionEnd = s + 2; 
+        }
+        if (e.keyCode === 222 || e.which === 222) {
+          e.preventDefault();
+          var s = this.selectionStart;
+          this.value = this.value.substring(0, this.selectionStart) + "\"" + this.value.substring(this.selectionEnd);
+          this.selectionEnd = s + 1; 
         }
       }
       function getQuery(variable) {
