@@ -230,7 +230,7 @@
               code = "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Put your title here!</title>\n  </head>\n  <body>\n    <h1>This header is largest!</h1>\n    <h3>This header is large!</h3>\n    <h4>This header is small.</h4>\n    <h6>This header is smallest.</h6>\n  </body>\n</html>";
             break;
             case "3":
-              code = "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Comment Thing!</title>\n  </head>\n  <body>\n    <h1 id=\"text\"></h1>\n    <script>\n      var w = \"Put your text here!\";\n      for (var i = 0; i <= w.split(\"\").length; i++) {\n        document.getElementById(\"text\").innerHTML += w.split(\"\").splice(0, i).join(\"\") + \"<br>\";\n      }\n      for (var i = w.split(\"\").length - 1; i > 0; i--) {\n      document.getElementById(\"text\").innerHTML += w.split(\"\").splice(0, i).join(\"\") + \"<br>\";\n      }\n    </script>\n  </body>\n</html>";
+              code = "<!DOCTYPE html>\n<html>\n  <head>\n    <title>Comment Thing!</title>\n  </head>\n  <body>\n    <h1 id=\"text\"></h1>\n    <script>\n      var w = \"Put your text here!\";\n      for (var i = 0; i <= w.split(\"\").length; i++) {\n        document.getElementById(\"text\").innerHTML += w.split(\"\").splice(0, i).join(\"\") + \"<br>\";\n      }\n      for (var i = w.split(\"\").length - 1; i > 0; i--) {\n      document.getElementById(\"text\").innerHTML += w.split(\"\").splice(0, i).join(\"\") + \"<br>\";\n      }\n    &lt/script>\n  </body>\n</html>";
             break;
             default:
               if (getQuery("L")) {
